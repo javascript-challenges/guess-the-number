@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="game-header">
+      <h2>Guess the Number</h2>
+    </header>
+
+    <section class="game-section">
+      <div class="game-container">
+        <form class="game-form">
+          <div class="game-title">
+            <h1 class="guess-prompt">Enter a guess between 0 to 100</h1>
+          </div>
+          <div class="input-area">
+            <input
+              type="number"
+              name="guess"
+              class="guess-input"
+              placeholder="Enter a number"
+              aria-label="Enter your guess"
+              min="0"
+              max="100"
+              required
+            />
+          </div>
+          <div class="game-actions">
+            <input type="submit" value="Submit" class="btn submit-btn" />
+            <button type="button" class="btn start-game-btn" disabled>Start Game</button>
+          </div>
+          <div class="guess-feedback">
+            <p class="guess-suggestion" aria-live="polite"></p>
+            <p class="current-guess">Your guess: <span class="user-guess">--</span></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
